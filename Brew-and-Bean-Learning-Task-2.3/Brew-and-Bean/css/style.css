@@ -1,0 +1,20 @@
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:#3b2418;background:#fffaf5}
+header{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:18px 8%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.brand{display:flex;align-items:center;gap:12px}.brand h2{font-size:22px}.brand small{font-size:9px;letter-spacing:2px}
+nav{display:flex;gap:24px}nav a{color:#3b2418;text-decoration:none;font-weight:bold;transition:.3s}nav a:hover{color:#b46b35;transform:translateY(-2px)}
+/* Pure CSS element #1: coffee cup logo */
+.css-cup{width:36px;height:27px;background:#6f4025;border-radius:4px 4px 12px 12px;position:relative}.css-cup:after{content:"";position:absolute;right:-12px;top:5px;width:12px;height:15px;border:4px solid #6f4025;border-left:0;border-radius:0 10px 10px 0}
+.hero{min-height:590px;padding:70px 10%;display:flex;align-items:center;justify-content:space-between;gap:50px;background:#f5e6d5}
+.hero-text{max-width:560px;animation:slideIn .9s ease}.eyebrow{font-size:13px;font-weight:bold;letter-spacing:2px;margin-bottom:15px}.hero h1{font-size:clamp(40px,6vw,62px);line-height:1.05;margin-bottom:20px}.hero-text>p:not(.eyebrow){line-height:1.7;margin-bottom:25px}
+.btn{display:inline-block;padding:14px 28px;border-radius:25px;background:#6f4025;color:#fff;text-decoration:none;transition:.3s}.btn:hover{transform:scale(1.08);background:#4d2b1b}
+/* Pure CSS element #2: coffee cup illustration */
+.coffee-scene{position:relative;width:350px;height:350px;border-radius:50%;background:#ead1b8;display:flex;align-items:center;justify-content:center}
+.cup{position:relative;width:155px;height:105px;background:#fff;border:8px solid #6f4025;border-radius:12px 12px 45px 45px;z-index:2}.cup:after{content:"";position:absolute;right:-52px;top:18px;width:48px;height:48px;border:9px solid #6f4025;border-left:0;border-radius:0 35px 35px 0}.coffee{width:123px;height:30px;margin:5px auto;border-radius:50%;background:#6f4025}.saucer{position:absolute;bottom:82px;width:230px;height:35px;border-radius:50%;background:#fff;border:8px solid #6f4025}
+.steam{position:absolute;width:8px;height:55px;border-left:3px solid #9b765c;border-radius:50%;top:72px;animation:steam 2s infinite ease-in-out}.steam-one{left:145px}.steam-two{left:195px;animation-delay:.5s}
+.menu{padding:80px 8%;text-align:center}.menu>p{margin:10px 0 40px;color:#765b4a}.cards{display:flex;justify-content:center;gap:25px;flex-wrap:wrap}.card{width:280px;padding:30px;background:#fff;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.08);transition:.3s}.card:hover{transform:translateY(-10px)}.emoji{font-size:55px;margin-bottom:15px}.card p{margin:10px 0 15px;color:#765b4a}
+.about{padding:75px 15%;text-align:center;background:#f5e6d5}.about p{max-width:700px;margin:15px auto 0;line-height:1.8}
+footer{padding:40px;text-align:center;line-height:2;background:#3b2418;color:#fff}
+@keyframes slideIn{from{opacity:0;transform:translateX(-50px)}to{opacity:1;transform:translateX(0)}}@keyframes steam{0%{opacity:0;transform:translateY(15px)}50%{opacity:1}100%{opacity:0;transform:translateY(-15px)}}
+@media(max-width:700px){header{flex-direction:column;gap:15px}nav{gap:12px}.hero{flex-direction:column;text-align:center}.coffee-scene{width:270px;height:270px}}
